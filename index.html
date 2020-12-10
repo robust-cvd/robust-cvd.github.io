@@ -1,1 +1,167 @@
-<h1 class="center">Robust Consistent Video Depth Estimation</h1>
+<!DOCTYPE html>
+<html lang="en" class=" chrome-clearly-theme-default"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Robust Consistent Video Depth Estimation</title>
+
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0">
+        <meta name="description" content="arXiv preprint.">
+        <meta name="keywords" content="facebook, virginia tech, video depth, consistent, ">
+        <meta name="author" content="Facebook">
+        <meta name="robots" content="all">
+        <link href="./Robust_Consistent_Video_Depth_Estimation_files/css2" rel="stylesheet">
+        <link rel="stylesheet" href="./Robust_Consistent_Video_Depth_Estimation_files/style.css">
+        <script type="text/javascript" async="" src="./Robust_Consistent_Video_Depth_Estimation_files/analytics.js"></script><script src="./Robust_Consistent_Video_Depth_Estimation_files/jquery.min.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="./Robust_Consistent_Video_Depth_Estimation_files/js"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '');
+        </script>
+    <style type="text/css">a#link-to-fond:hover{background-color:#fff;color:#4e80ff!important}a#link-to-fond:visited{color:#fff}#close-fond-bar:hover{cursor:pointer}#fond-bar{display:block;height:50px;max-height:60px;min-height:10px;background-color:#147bd1;padding:5px 5px 5px 10px;position:fixed;left:0;top:42px;margin-top:-60px;width:100%;z-index:999999;text-align:center;-webkit-box-sizing:initial;box-sizing:initial}#fond-bar-container{display:inline-block;width:98%;margin:0;position:relative;line-height:32px;max-height:32px}#fond-text{position:relative;color:#fff!important;font-size:16px!important;text-align:centecenter!important;margin:0!important;float:left!important;text-shadow:none!important;padding:4px!important;line-height:60px;vertical-align:middle;width:100%}#fond-text,#link-to-fond{font-family:walsheim,Arial!important}#link-to-fond{color:#fff;font-size:14px!important;font-weight:400!important;border:1px solid #fff;padding:6px 20px;border-radius:2px;text-decoration:none!important;margin-left:12px}#fond-small{width:24px;height:24px;margin-right:8px;margin-top:-2px;vertical-align:middle;display:inline!important}#close-fond-bar{position:absolute;top:26px;right:5px;width:14px;z-index:999999;font-family:Arial;font-size:12px}</style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <canvas id="global-canvas" width="3840" height="1824" style="transform: translate(0px, 0px);"></canvas>
+        <div class="container">
+            <div class="header">
+              <div class="title">
+                  <h1>Robust Consistent Video Depth Estimation</h1>
+                  <div class="title-line"><hr></div>
+              </div>
+
+
+
+                  <div class="authors">
+                    <h4>
+                        <span class="no-wrap"><a href="https://johanneskopf.de/">Johannes Kopf</a><sup>1</sup></span>,
+                        <span class="no-wrap">&nbsp;&nbsp;&nbsp;<a href="https://xrong.org/">Xuejian Rong</a><sup>1</sup></span>,
+                        <span class="no-wrap">&nbsp;&nbsp;&nbsp;<a href="https://filebox.ece.vt.edu/~jbhuang/">Jia-Bin Huang</a><sup>2</sup></span>
+                    </h4>
+                  </div>
+                  <div class="organization">
+                      <h3>Facebook<sup>1</sup>, &nbsp;&nbsp;&nbsp; Virginia Tech<sup>2</sup></h3>
+                  </div>
+
+                <div class="subheading">
+                    <h3>
+					<a href="">ArXiv</a> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+					<a href="https://github.com/robust-cvd/robust-cvd.github.io/blob/main/RobustCVD.pdf">Paper</a> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+					<a href="">Code (coming soon)</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+					<a href="https://youtu.be/x-wHrYHJSm8">Video</a>  </h3>
+                    <!-- <p class="subheading-link">
+                        <a href="">ArXiV</a>
+                    </p> -->
+                </div>
+
+                </div>
+              </div>
+            <div class="content">
+                <div class="section" style="padding: 0 0 10px 0;">
+<!--                    <video controls="" poster="assets/img/video_poster.jpg" style="padding-bottom: 20px; width: 100%">-->
+<!--                      <source src="https://youtu.be/x-wHrYHJSm8" type="video/mp4">-->
+<!--                      Play Video-->
+<!--                    </video>-->
+                  <div class="videoWrapper">
+                  <iframe src="https://www.youtube.com/embed/x-wHrYHJSm8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="paper-thumbnails">
+                    <div class="page">
+                        <a href=""><img src="./Robust_Consistent_Video_Depth_Estimation_files/RCVD-1.jpg" alt="Download .pdf"></a>
+                    </div>
+                    <div class="page">
+                        <a href=""><img src="./Robust_Consistent_Video_Depth_Estimation_files/RCVD-2.jpg" alt="Download .pdf"></a>
+                    </div>
+                    <div class="page">
+                        <a href=""><img src="./Robust_Consistent_Video_Depth_Estimation_files/RCVD-3.jpg" alt="Download .pdf"></a>
+                    </div>
+                    <div class="page">
+                        <a href=""><img src="./Robust_Consistent_Video_Depth_Estimation_files/RCVD-4.jpg" alt="Download .pdf"></a>
+                    </div>
+                    <div class="page">
+                      <a href=""><img src="./Robust_Consistent_Video_Depth_Estimation_files/RCVD-5.jpg" alt="Download .pdf"></a>
+                  </div>
+                  <div class="page">
+                      <a href=""><img src="./Robust_Consistent_Video_Depth_Estimation_files/RCVD-6.jpg" alt="Download .pdf"></a>
+                  </div>
+                  <div class="page">
+                      <a href=""><img src="./Robust_Consistent_Video_Depth_Estimation_files/RCVD-7.jpg" alt="Download .pdf"></a>
+                  </div>
+                  <div class="page">
+                      <a href=""><img src="./Robust_Consistent_Video_Depth_Estimation_files/RCVD-8.jpg" alt="Download .pdf"></a>
+                  </div>
+
+                    <p class="pt-15">
+                        Click to <a href="" class="content-link">download</a> a PDF of the paper.
+                    </p>
+                </div>
+                <div class="section">
+                    <h5>Abstract</h5>
+                    <p>We present an algorithm for estimating consistent dense depth maps and camera poses from a monocular video. We integrate a learning-based depth prior, in the form of a convolutional neural network trained for single-image depth estimation, with geometric optimization, to estimate a smooth camera trajectory as well as detailed and stable depth reconstruction.
+                      Our algorithm combines two complementary techniques: (1) flexible deformation-splines for low-frequency large-scale alignment and (2) geometry-aware depth filtering for high-frequency alignment of fine depth details. In contrast to prior approaches, our method does not require camera poses as input and achieves robust reconstruction for challenging hand-held cell phone captures that contain a significant amount of noise, shake, motion blur, and rolling shutter deformations.
+                      Our method quantitatively outperforms state-of-the-arts on the Sintel benchmark for both depth and pose estimations, and attains favorable qualitative results across diverse wild datasets.
+                      </p>
+                </div>
+            </div>
+			<!--
+            <div class="content">
+                <div class="section">
+                    <h5>Comparisons</h5>
+                    <p>To be added:
+                    </p>
+                    <p><b>DAVIS</b>: ...<br>
+                    <b>MPI Sintel</b>: ...<br>
+                    <b>Casual Callphone Videos</b>: ...</p>
+                    <p>More comparison videos row by row below.</p>
+			-->
+
+
+              <div class="section">
+                <h5 style="text-transform: none;">BibTeX</h5>
+                <div class="bibtex-text">
+                        @article{,<br>
+                        &nbsp;&nbsp;title={Robust Consistent Video Depth Estimation},<br>
+                        &nbsp;&nbsp;author={Kopf, Johannes and Rong, Xuejian and Huang, Jia-Bin},<br>
+                        &nbsp;&nbsp;journal={arXiv preprint arXiv:XXXX.XXXXX)},<br>
+                        &nbsp;&nbsp;year={2020}<br>
+                        }
+                </div>
+              </div>
+            </div>
+            <div class="footer">
+                <div class="footer-decoration">
+                    <div class="footer-decoration-col" style="background-color: #1877f2;"></div>
+                    <div class="footer-decoration-col" style="background-color: #1877f2;"></div>
+                    <div class="footer-decoration-col" style="background-color: #1877f2;"></div>
+                    <div class="footer-decoration-col" style="background-color: #1877f2;"></div>
+                </div>
+                <div class="footer-content">
+                    <div class="footer-links-row">
+                        <div class="footer-links-left">
+                            <h6>Related Work</h6>
+                            <ul class="footer-links">
+                                <li><a href="https://augmentedperception.github.io/deepview">Consistent Video Depth Estimation</a></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="footer-links-right">
+                            <h6>Additional Links</h6>
+                            <ul class="footer-links">
+                                <li><a href="https://s2020.siggraph.org/submissions/technical-papers-submissions">SIGGRAPH 2020 Technical Papers</a></li>
+                                <li><a href="https://dl.acm.org/">ACM Digital Library</a></li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+        <script src="./Robust_Consistent_Video_Depth_Estimation_files/main.js"></script>
+
+
+</body>
+
+</html>
+              
